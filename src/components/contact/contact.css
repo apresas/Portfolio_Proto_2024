@@ -1,0 +1,235 @@
+.contact_container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+
+.contact {
+  position: relative;
+  padding-bottom: 8rem;
+  padding-top: 3rem;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  transform: rotate(180deg);
+  width: 60%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../../assets/bg_fractal_pattern.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -10;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  background: red;
+  bottom: 0;
+  top: 0;
+  right: 35%;
+  left: 40%;
+  z-index: -4;
+  background: linear-gradient(-110deg, var(--color-bg) 50%, transparent);
+}
+
+.contact_header::before {
+  content: "";
+  position: absolute;
+  background: red;
+  bottom: 90%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -4;
+  background: linear-gradient(180deg, var(--color-bg) 50%, transparent);
+}
+
+.contact_container h5 {
+  color: var(--color-light);
+  font-family: "Oswald";
+  font-weight: 300;
+}
+
+.contact_container h4 {
+  font-size: 1.25rem;
+}
+
+.name_row {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact_options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.2rem;
+}
+
+.contact_header {
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0 10rem;
+}
+
+.contact_header > h3 {
+  color: var(--color-primary);
+}
+
+.contact_option {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: var(--color-purple);
+  padding: 1.2rem;
+  border-radius: 7px;
+  text-align: center;
+  /* border: 2px solid var(--color-varient-dark); */
+  border: 2px solid var(--color-purple);
+  transition: var(--transition);
+  justify-self: end;
+}
+
+.contact_option:hover {
+  /* background: transparent; */
+  transform: scale(1.1);
+  border: 2px solid var(--color-purple);
+}
+
+/* .contact_option:hover .contact_option-icon {
+  color: var(--color-primary);
+} */
+
+.contact_option-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-bg);
+}
+
+.contact_option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.contact_portrait {
+  position: absolute;
+  max-width: 100%;
+  /* min-height: 50%; */
+  bottom: 90px;
+  left: 10%;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+
+.form_btn {
+  transition: transform 1000ms;
+}
+
+.form_btn:hover {
+  transform: translateY(-0.5rem);
+  color: var(--color-primary);
+  transition: transform 250ms;
+}
+
+/* =============== FORM =============== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  resize: none;
+  color: var(--color-white);
+  font-family: "Oswald";
+}
+
+form textarea {
+  height: 20rem;
+}
+
+form button {
+  background: var(--color-primary);
+
+}
+
+form button:hover {
+  transform: translateY(-1.75rem);
+  background: var(--color-purple);
+}
+
+
+/* ========== Media Queries (LRG) ============ */
+@media screen and (max-width: 1800px) {
+  .contact_portrait {
+    bottom: 105px;
+  }
+  .contact {
+    padding-top: 1.5rem;
+  }
+  
+}
+
+/* ========== Media Queries (MED) ============ */
+@media screen and (max-width: 1024px) {
+  .container.contact_container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact_portrait {
+    max-width: 25%;
+    min-height: 25%;
+    left: 4rem;
+    bottom: 130px;
+  }
+}
+
+/* ========== Media Queries (SM) ============ */
+@media screen and (max-width: 600px) {
+  .container.contact_container {
+    width: var(--container-width-sm);
+  }
+
+  .contact_portrait {
+    max-width: 30%;
+    left: 0rem;
+    bottom: 135px;
+  }
+}
+
+/* ========== Media Queries (xSM) ============ */
+/* @media screen and (max-width: 430px) {
+  .contact_portrait {
+    width: 30%;
+    left: 14.75rem;
+    bottom: 44.65rem;
+  }
+} */
+
+/* ========== Media Queries (xSM) ============ */
+/* @media screen and (max-width: 400px) {
+  .contact_portrait {
+    width: 30%;
+    left: 13.75rem;
+    bottom: 44.65rem;
+  }
+} */

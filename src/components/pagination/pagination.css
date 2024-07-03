@@ -1,0 +1,40 @@
+.pagination {
+    display: flex;
+    /* background: red; */
+    color: #fff;
+    gap: 1rem;
+}
+
+.page_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-gray);
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    transition: var(--transition);
+
+}
+
+.page_item:hover {
+    transform: scale(1.1);
+    background: var(--color-primary);
+}
+
+
+.page_item:hover a{
+    color: transparent;
+}
+
+.page_item a {
+    color: transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.active_nav a {
+    transition: var(--transition);
+    color: transparent;
+    user-select: none;
+}

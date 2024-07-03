@@ -1,0 +1,32 @@
+.brief_header_title {
+    font-size:3rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.brief_title {
+    /* color: red; */
+    font-size:2rem;
+    margin-top: 2rem;
+}
+
+.brief_p {
+    font-size: 1.25rem;
+    margin-left: 4rem;
+}
+
+.brief_ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-family: "oswald"; 
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.brief_li {
+    list-style: numeric;
+    margin-left: 4rem;
+    
+}

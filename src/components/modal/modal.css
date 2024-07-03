@@ -1,0 +1,147 @@
+.modal {
+    width: 50vw;
+    height: 100vh;
+    /* margin: auto; */
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    color: var(--color-bg);
+
+    overflow: scroll;
+
+
+
+    /* width: clamp(50%, 700px, 90%);
+    height: min(50%, 300px); */
+}
+
+
+.modal_header_about small{
+    color: var(--color-purple);
+    font-size: 1rem;
+}
+
+.modal_header {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin-bottom: 2rem;
+    font-family: "Barlow Condensed";
+    gap: 1rem;
+}
+
+.modal_header_about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tags_li {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+.hero_image_container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.hero_image_container img {
+    width: 40%;
+    z-index: 1;
+}
+
+.hero_image_container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../../assets/bg_fractal_pattern.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.section_title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--color-bg);
+    font-size: 1.5rem;
+    font-family: "barlow Condensed";
+}
+
+.modal:hover {
+    cursor: default;
+}
+
+.modal_controls{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-end; */
+}
+
+.close_btn {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--color-purple);
+    justify-self: flex-end;
+
+}
+.close_btn:hover {
+    color: var(--color-primary);
+
+}
+
+.modal_grid, .work_modal_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+}
+
+.placeholder {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: var(--color-purple);
+}
+
+.modal_description {
+    margin-bottom: 2rem;
+}
+
+.modal_description_container {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-family: "Barlow Condensed";
+    font-size: 1.2rem;
+}
+
+.modal_description_container span a{
+    color: var(--color-purple);
+}
+
+.modal_description_container span a:hover{
+    color: var(--color-primary);
+}

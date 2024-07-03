@@ -1,0 +1,128 @@
+.carousel {
+  position: relative;
+  cursor: grab;
+  overflow: hidden;
+  padding: 1rem 1rem;
+  width: 100%;
+  margin: 5rem 0;
+}
+
+.inner_carousel {
+  display: flex;
+  /* align-items: flex-start; */
+
+  justify-content: flex-start;
+}
+
+.item {
+  position: relative;
+  min-height: 40rem;
+  min-width: 20rem;
+  padding: 40px;
+  margin: 0 1rem;
+  background: var(--color-bg-varient);
+  border-radius: 2rem;
+  border: 3px solid var(--color-varient-dark);
+  color: var(--color-white);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.item:hover {
+  background: transparent;
+  border-color: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+.item:hover .expand_btn{
+  transform: scale(1.2);
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.item img {
+  position: absolute;
+  opacity: 1;
+  height: 70%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.item:hover img {
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.portfolio_info {
+  position: absolute;
+  bottom: 9%;
+}
+
+.item .portfolio_info h4 {
+  font-size: 1.2rem;
+}
+
+.item .portfolio_info h5 {
+  font-family: "Oswald";
+  font-weight: 300;
+  color: var(--color-light);
+}
+
+.expand_btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  font-size: 1.25rem;
+  color: var(--color-light);
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  /* margin-left: 2rem; */
+}
+
+.expand_btn:hover {
+  color: var(--color-primary)
+}
+
+  /* ========== Media Queries (SM) ============ */
+  @media screen and (max-width: 600px) {
+
+    .item {
+      display: flex;
+      place-items: flex-end;
+      min-height: 31rem;
+      min-width: 16rem;
+      padding: 1rem;
+    }
+
+    .carousel {
+      display: flex;
+      height: 100%;
+      margin: 0;
+    }
+
+
+    .portfolio_info {
+      /* position: relative; */
+      bottom: 7%;
+      transform: scale(0.9);
+      /* margin-bottom: 1rem; */
+    }
+
+    .item:hover {
+      background: transparent;
+      border-color: var(--color-secondary);
+      transform: scale(.95);
+    }
+    .item:hover img {
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+  
+
+  }

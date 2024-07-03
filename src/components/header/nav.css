@@ -1,0 +1,222 @@
+.nav {
+    /* position: absolute; */
+    position: relative;
+    background: var(--color-bg);
+    color: white;
+    width: 100%;
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    /* overflow: hidden; */
+
+}
+
+.nav::after {
+    content: "";
+    position: absolute;
+    /* transform: rotate(180deg); */
+    width: 60%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../assets/bg_fractal_pattern.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -2;
+  }
+
+  .nav::before {
+    content: "";
+    position: absolute;
+    background: red;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 40%;
+    z-index: -1;
+    background: linear-gradient(90deg, var(--color-bg) 50%, transparent);
+  }
+
+/* .nav::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: var(--color-primary);
+    background: linear-gradient(
+        90deg,
+        var(--color-primary) 30%,
+        transparent
+      );
+    bottom: -3px;
+} */
+
+
+/* .nav_divider {
+    height: 2px;
+    width: 90%;
+    position: absolute;
+    background-color: var(--color-secondary);
+    background: linear-gradient(
+        90deg,
+        var(--color-secondary) 30%,
+        transparent
+      );
+      top: 4.25rem;
+      z-index: 10;
+} */
+
+.nav_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: var(--container-width-xtra-lg);
+    padding: 0 2rem;
+    transition: var(--transition);
+}
+
+.nav_container a {
+    font-size: 1.1rem;
+    transition: var(--transition-social);
+}
+
+.nav_links {
+    display: flex;
+    font-family: 'Barlow Condensed';
+    font-weight: 300;
+    align-items: center;
+    justify-content: end;
+    gap: 2.5rem;
+
+}
+
+.nav_links span a {
+    color: var(--color-primary);
+}
+
+.nav_links span:hover a {
+    color: var(--color-purple);
+}
+
+.nav_links a {
+    color: var(--color-light);
+}
+
+.nav_controls {
+    justify-self: end;
+    align-self: center;
+}
+
+/* .nav_controls a {
+    color: #fff;
+    font-family: 'Walkway';
+
+} */
+
+.nav_controls a {
+    color: var(--color-bg);
+    font-size: 1.2rem;
+}
+
+
+
+.nav_links a:hover {
+    color: var(--color-primary);
+    transform: scale(1.1);
+    /* font-size: 1rem; */
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-purple);
+    padding: 1rem 0.5rem;
+    border-radius: 7px;
+    /* margin-right: 1rem; */
+}
+
+.logo_section {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.logo_section label {
+    /* margin-left: 1rem; */
+    font-family: 'Gobold';
+}
+
+.logo_section label span {
+    color: var(--color-gray);
+    font-weight: 100;
+}
+
+
+
+.logo {
+    opacity: 1;
+    filter: brightness(0%) invert(0%);
+    height: 20px;
+  }
+
+.nav_btn {
+    background: var(--color-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav_btn a, .nav_btn small {
+    color: var(--color-bg);
+}
+
+.nav_btn small {
+    display: none;
+}
+
+.nav_btn:hover small {
+    display:contents;
+}
+
+.nav_btn:hover a, .nav_btn:hover small {
+color: #fff;
+}
+
+
+  /* ========== Media Queries (LRG) ============ */
+@media screen and (max-width: 1800px) {
+    .nav_container {
+        width: var(--container-width-lg);
+        /* background: red; */
+    }
+  }
+
+    /* ========== Media Queries (MED) ============ */
+@media screen and (max-width: 1024px) {
+    .nav_container {
+        width: var(--container-width-md);
+    }
+  }
+  
+    /* ========== Media Queries (SM) ============ */
+@media screen and (max-width: 600px) {
+    .nav {
+        visibility: hidden;
+    }
+
+
+    .nav_divider {
+        visibility: hidden;
+    }
+  }
+
+
